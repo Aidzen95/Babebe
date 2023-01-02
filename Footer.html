@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <title>Footer</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        #footer .row{
+            display: flex;
+            padding: 50px;
+            flex-wrap: wrap;
+        }
+        #footer .row .col{
+            width: calc(100% / 6);
+            height: 420px;
+            padding: 3%;
+        }
+        #footer .row .col .sp{
+            list-style: none;
+        }
+        .row .col .sp a{
+            text-decoration: none;
+            color: black;
+            line-height: 25px;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 15px;
+            transition: 1s;
+        }
+        .row .col .title{
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 20px;
+        }
+        #footer .row .col .sp li:hover a{
+            text-decoration: underline;
+        }
+        .fa-brands{
+            display: block;
+            font-size: 25px;
+            margin-bottom: 10px;
+        }
+        @media only screen and (max-width: 900px){
+            #footer .row .col{
+                flex: calc(100% / 3);
+                padding: 1%;
+            }   
+        }
+        @media only screen and (max-width: 600px){
+            #footer .row .col{
+                flex: calc(100% / 2);
+                padding: 1%;
+            }   
+        }
+        @media only screen and (max-width: 300px){
+            #footer .row .col{
+                flex: 100%;
+                padding: 1%;
+            }   
+        }
+        #footer .end{
+            display: flex;
+            background: rgb(66, 66, 66);
+            flex-direction: row;
+            justify-content: center;
+        }
+        #footer .end .row a{
+            text-decoration: none;
+            color: aliceblue;
+            margin-left: 5px;
+            margin-right: 5px;
+        }
+        #footer .end .row span{
+            color: aliceblue;
+        }
+        @media only screen and (max-width: 600px){
+            #end .row {
+                flex: calc(100% / 2);
+            }
+            #end .row a{
+                display: flex;
+                flex-wrap: wrap;
+            }   
+        }
+    </style>
+</head>
+<body>
+    <div id="footer">
+        <div class="row">
+            <div class="col">
+                <div class="title">
+                    <h2>SẢN PHẨM</h2><br>
+                </div>
+                <div class="sp">
+                    <Li><a href="#">Giày</a></Li>
+                    <Li><a href="#">Quần áo</a></Li>
+                    <Li><a href="#">Phụ kiện</a></Li>
+                    <Li><a href="#">Hàng mới về</a></Li>
+                    <Li><a href="#">Release Date</a></Li>
+                    <Li><a href="#">adidas Exclusive</a></Li>
+                    <Li><a href="#">Outlet</a></Li>
+                </div>
+            </div>
+            <div class="col">
+                <div class="title">
+                    <h2>THỂ THAO</h2><br>
+                </div>
+                <div class="sp">
+                    <Li><a href="#">Chạy</a></Li>
+                    <Li><a href="#">Đánh Gôn</a></Li>
+                    <Li><a href="#">Tập luyện</a></Li>
+                    <Li><a href="#">Bóng đá</a></Li>
+                    <Li><a href="#">Bóng rổ</a></Li>
+                    <Li><a href="#">Quần vợt</a></Li>
+                    <Li><a href="#">Ngoài trời</a></Li>
+                    <Li><a href="#">Bơi lội</a></Li>
+                </div>
+            </div>
+            <div class="col">
+                <div class="title">
+                    <h2>BỘ SƯU TẬP</h2><br>
+                </div>
+                <div class="sp">
+                    <Li><a href="#">IVY PARK</a></Li>
+                    <Li><a href="#">Giày adidas Pharell William</a></Li>
+                    <Li><a href="#">Giày Ultra Boost</a></Li>
+                    <Li><a href="#">Giày Pureboost</a></Li>
+                    <Li><a href="#">Predator</a></Li>
+                    <Li><a href="#">X</a></Li>
+                    <Li><a href="#">Copa</a></Li>
+                    <Li><a href="#">Continental 80</a></Li>
+                    <Li><a href="#">Giày Superstar</a></Li>
+                    <Li><a href="#">Giày Stan Smith</a></Li>
+                    <Li><a href="#">nmd</a></Li>
+                    <Li><a href="#">ZX</a></Li>
+                </div>
+            </div>
+            <div class="col">
+                <div class="title">
+                    <h2>THÔNG TIN VỀ CÔNG TY</h2><br>
+                </div>
+                <div class="sp">
+                    <Li><a href="#">Về chúng tôi</a></Li>
+                    <Li><a href="#">Cơ hội nghề nghiệp</a></Li>
+                    <Li><a href="#">Tin tức</a></Li>
+                </div>
+            </div>
+            <div class="col">
+                <div class="title">
+                    <h2>HỖ TRỢ</h2><br>
+                </div>
+                <div class="sp">
+                    <Li><a href="#">Dịch vụ trợ giúp khách hàng</a></Li>
+                    <Li><a href="#">Công cụ tìm kiếm cửa hàng</a></Li>
+                    <Li><a href="#">Biểu đồ kích cỡ</a></Li>
+                    <Li><a href="#">Thanh toán</a></Li>
+                    <Li><a href="#">Giao Hàng</a></Li>
+                    <Li><a href="#">Trả hàng và hoàn tiền</a></Li>
+                    <Li><a href="#">Khuyến Mãi</a></Li>
+                    <Li><a href="#">Sơ đồ trang web</a></Li>
+                </div>
+                <div class="logo">
+                    <img src="images/bocongthuong.jpg" alt="" width="150px" height="150px">
+                </div>
+            </div>
+            <div class="col">
+                <div class="title">
+                    <h2>THEO DÕI CHÚNG TÔI</h2><br>
+                </div>
+                <div class="icon">
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-brands fa-pinterest"></i>
+                    <i class="fa-brands fa-tiktok"></i>
+                    <i class="fa-brands fa-youtube"></i>
+                </div>
+            </div>
+        </div>
+        <div class="end">
+            <div class="row">
+                <a href="#">Chính sách bảo mật</a>
+                <span>|</span>
+                <a href="#">Điều khoản và điều kiện</a>
+                <span>|</span>
+                <a href="#">XUẤT BẢN BỞI</a>
+                <span>|</span>
+                <a href="#">© 2020 Công ty TNHH adidas Việt Nam</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

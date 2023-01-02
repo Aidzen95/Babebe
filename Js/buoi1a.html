@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id = "meo">Con mèo</p>
+    <h1 id = "lan">Hoa lan</h1>
+    <input type="text" value = "7" id = "bay">
+    <p id = "kq"></p>Kết quả</p>
+
+    
+    <form>
+        <label>A</label> <input type="text" id="a"><br>
+        <label>B</label> <input type="text" id="b"><br>
+        <input type="button" value="tổng" onclick="Tinhtong()"><br>
+        <input type="button" value="hiệu" onclick="Tinhhieu()"><br>
+        <input type="button" value="tích" onclick="Tinhtich()"><br>
+    </form>
+    <script>
+        let meo=document.getElementById("meo");
+        let lan=document.getElementById("lan");
+        let bay=document.getElementById("bay");
+        console.log(meo.innerHTML);
+        console.log(lan.innerHTML);
+        console.log(bay.value); //thẻ input thì dùng value
+
+        function Tinhtong()
+        {
+            kq.innerHTML=a.value * 1 + b.value * 1;
+        }
+        function Tinhhieu()
+        {
+            kq.innerHTML=a.value - b.value;
+        }
+        function Tinhtich()
+        {
+            kq.innerHTML=a.value * b.value;
+        }
+    </script>
+</body>
+</html>

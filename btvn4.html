@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .contain{
+            width: 60%;
+            margin: 100px auto;
+        }
+        .contain .area{
+            display: flex;
+        }
+        .contain .area .box{
+            width: calc(100% / 5);
+            padding: 20px;
+            text-align: center;
+        }
+        .contain .box img{
+            width: 100%;
+        }
+        .contain .area .box img{
+            width: 60%;
+            filter: grayscale(100%);
+        }
+        .contain .info .thumb{
+            display: flex;
+            padding: 30px;
+            display: none;
+        }
+        .contain .info .thumb.active{
+            display: flex;
+        }
+        .contain .info .thumb .left{
+            width: 40%;
+        }
+        .contain .info .thumb .right{
+            width: 60%;
+            padding: 60px;
+        }
+        .contain .info .thumb .left img{
+            width: 100%;
+        }
+        .contain .area .box.active img{
+            filter: grayscale(0%);
+        }
+        .contain .area .box.active p{
+            transform:scale(2);
+        }
+        p{
+            transition: 1s;
+        }
+        .contain .area .thumb.active image{
+            display: contents;
+        }
+    </style>
+</head>
+<body>
+    <div class="contain">
+        <div class="row area">
+            <div class="box active">
+                <img src="images1/tab-1.png" alt="">
+                <p>Research</p>
+            </div>
+            <div class="box">
+                <img src="images1/tab-2.png" alt="">
+                <p>Research</p>
+            </div>
+            <div class="box">
+                <img src="images1/tab-3.png" alt="">
+                <p>Research</p>
+            </div>
+            <div class="box">
+                <img src="images1/tab-4.png" alt="">
+                <p>Research</p>
+            </div>
+            <div class="box">
+                <img src="images1/tab-5.png" alt="">
+                <p>Research</p>
+            </div>
+        </div>
+        <div class="row info">
+            <div class="thumb active">
+                <div class="left">
+                    <img src="images1/tab-1.png" alt="">
+                </div>
+                <div class="right">
+                    <h2>RESEARCH & ANALYTICS</h2>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex ea consequuntur laboriosam quasi quis repudiandae rerum, dolore mollitia fugiat fuga rem ab expedita! Reiciendis veniam maiores magnam, vitae eligendi inventore aut ut, distinctio odio quod tempora non perferendis beatae alias!</p>
+                    <button>Details</button>
+                </div>
+            </div>
+            <div class="thumb">
+                <div class="left">
+                    <img src="images1/tab-2.png" alt="">
+                </div>
+                <div class="right">
+                    <h2>RESEARCH & ANALYTICS</h2>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex ea consequuntur laboriosam quasi quis repudiandae rerum, dolore mollitia fugiat fuga rem ab expedita! Reiciendis veniam maiores magnam, vitae eligendi inventore aut ut, distinctio odio quod tempora non perferendis beatae alias!</p>
+                    <button>Details</button>
+                </div>
+                <div class="thumb">
+                    <div class="left">
+                        <img src="images1/tab-3.png" alt="">
+                    </div>
+                    <div class="right">
+                        <h2>RESEARCH & ANALYTICS</h2>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex ea consequuntur laboriosam quasi quis repudiandae rerum, dolore mollitia fugiat fuga rem ab expedita! Reiciendis veniam maiores magnam, vitae eligendi inventore aut ut, distinctio odio quod tempora non perferendis beatae alias!</p>
+                        <button>Details</button>
+                    </div>
+                </div>
+                <div class="thumb">
+                    <div class="left">
+                        <img src="images1/tab-4.png" alt="">
+                    </div>
+                    <div class="right">
+                        <h2>RESEARCH & ANALYTICS</h2>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex ea consequuntur laboriosam quasi quis repudiandae rerum, dolore mollitia fugiat fuga rem ab expedita! Reiciendis veniam maiores magnam, vitae eligendi inventore aut ut, distinctio odio quod tempora non perferendis beatae alias!</p>
+                        <button>Details</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let box=document.querySelectorAll('.area .box');
+        console.log(box);
+        for(let i=0; i<box.length;i++){
+            box[i].addEventListener('mouseover', show, display)
+        }
+        function show(){
+            for(let i=0; i<box.length;i++){
+                box[i].classList.remove('active');
+            }
+            this.classList.add('active');
+        }
+        function display(){
+            for(let i=0; i<thumb.length;i++){
+                thumb[i].style.display='flex';
+            }
+            this.classList.add('active');
+        }
+    </script>
+</body>
+</html>

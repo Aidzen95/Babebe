@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    mèo
+
+
+    <script>
+        let a = 5;
+        let b = 6;
+        let c= 10.5;
+        let d = "mèo"
+        let tong = 0;
+
+        let x = 5;
+        let z = x ** 2; // = Math.pow(x,2)
+
+        console.log(a+b+d); //cộng từ trái qua thì a + b = 11 rồi cộng thêm 1 chỗi
+        console.log(d+a+c); //d là một chuỗi nên phép tính là chuỗi co6g chuỗi
+        console.log(d+(a+b)); // ưu tiên phép tính
+        console.log(1/2);
+        console.log(z);
+
+        if(a < 0){
+            console.log("a lớn hơn 0");
+        }
+        else if(a == 0){
+            console.log("a bằng 0");
+        }
+        else{
+            console.log("a lớn hơn 0");
+        }
+
+        for(let i = 0; i < a; i++)
+        {
+            tong+=i;
+        }
+        console.log("Tổng của 1+2+3+..." + a + " là:  " + tong);
+
+        function Tong(a,b){
+            return a+b;
+        }
+        console.log("Tổng hai số a và b là: " + Tong(a,b));
+
+        function TongN(n)
+        {
+            let tong = 0;
+            for(let i = 0; i < n; i++)
+            {
+                tong+=i;
+            }
+            return tong;
+        }
+        console.log("1+2+3+...n là: " + TongN(6));
+        //array
+
+        let arr = [1,2,3,4,5];
+
+        function tongmang(x){
+            let tong = 0;
+            for(let i = 0; i< x.length;i++)
+            {
+                tong+=x[i];
+            }
+            return tong;
+        }
+        console.log("Tổng mãng là: " + tongmang(arr));
+
+        const numbers = [45, 4, 9, 16, 25];
+        let txt = "";
+        for( let x in numbers)
+        {
+            txt += numbers[x];
+        }
+        console.log(txt);
+
+        
+    </script>
+</body>
+</html>

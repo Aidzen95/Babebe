@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .Box1{
+            background: red;
+            width: 400px;
+            height: 400px;
+            position: relative;
+        }
+        .Box2{
+            width: 0px;
+            height: 100px;
+            position: absolute;
+            background: violet;
+            left: 100%;
+            top: 100%;
+            transition: 3s;
+        }
+        .Box1:hover .Box2{
+            display: block;
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="Box1">
+            <div class="Box2"></div>
+        </div>
+        
+    </div>
+</body>
+</html>

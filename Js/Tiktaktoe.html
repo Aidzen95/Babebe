@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table input{
+            width: 90px;
+            height: 90px;
+            border: none;
+            border-radius: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <table>
+            <tr>
+                <td><input type="button" value="" id="0"></td>
+                <td><input type="button" value="" id="1"></td>
+                <td><input type="button" value="" id="2"></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="" id="3"></td>
+                <td><input type="button" value="" id="4"></td>
+                <td><input type="button" value="" id="5"></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="" id="6"></td>
+                <td><input type="button" value="" id="7"></td>
+                <td><input type="button" value="" id="8"></td>
+            </tr>
+        </table>
+
+        <p class="kq">Kết quả</p>
+        <script>
+            let input = document.querySelectorAll('input');
+            let check = true;
+            let arr=['','','','','','','','','']; //tạo mãng de lưu trữ kết quả
+            console.log(input);
+            for(let i=0;i<input.length;i++){
+               input[i].addEventListener('click', show);
+
+            }
+            function show(){
+                console.log(this.id);
+                if(check == true){
+                    this.value = 'X';
+                    this.style.background="yellow";
+                    this.style.pointerEvents="none";
+                    arr[this.id]='X';
+                    check = false;
+                }
+                else
+                {
+                    this.value = 'O';
+                    this.style.background="red";
+                    this.style.pointerEvents="none";
+                    arr[this.id]='O';
+                    check = true;
+                }
+                if(checkwin() !=-1)
+                {
+                    kq.innerHTML=checkwin() + "Thắng Nha!";
+                    for(let i=0;i<input.length;i++){
+                        input[i].style.pointerEvents="none";
+                    }
+                }
+            }
+
+            function checkwin(){
+                if(arr[0] == arr[1] && arr[1] == arr[2] && arr[0] != ""){
+                    return arr[1];
+                }
+                if(arr[3] == arr[4] && arr[4] == arr[5] && arr[3] != ""){
+                    return arr[4];
+                }
+                if(arr[6] == arr[7] && arr[7] == arr[8] && arr[6] != ""){
+                    return arr[7];
+                }
+                if(arr[0] == arr[4] && arr[4] == arr[8] && arr[0] != ""){
+                    return arr[2];
+                }
+                if(arr[2] == arr[4] && arr[4] == arr[6] && arr[2] != ""){
+                    return arr[3];
+                }
+                if(arr[0] == arr[3] && arr[3] == arr[6] && arr[0] != ""){
+                    return arr[5];
+                }
+                if(arr[1] == arr[4] && arr[4] == arr[7] && arr[1] != ""){
+                    return arr[6];
+                }
+                if(arr[2] == arr[6] && arr[6] == arr[8] && arr[2] != ""){
+                    return arr[8];
+                }
+                return -1;
+            }
+
+            function reset(){
+                location.reload();
+            }
+        </script>
+    </div>
+</body>
+</html>
